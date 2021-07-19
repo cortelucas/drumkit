@@ -9,6 +9,7 @@ const playSound = (sound) => {
   let keyElement = document.querySelector(`div[data-key="${sound}"]`);
   
   if(audioElement) {
+    audioElement.currentTime = 0;
     audioElement.play();
   }
 
