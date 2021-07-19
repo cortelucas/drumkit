@@ -31,3 +31,14 @@ const playSound = (sound) => {
     }, 300)
   }
 }
+
+const playComposition = (songArray) => {
+  let wait = 0;
+
+  for (let songItem of songArray) {
+    
+    setTimeout(() => {playSound(`key${songItem}`);}, wait);
+    wait+=300;
+
+  }
+}
